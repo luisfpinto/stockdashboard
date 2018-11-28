@@ -1,12 +1,46 @@
-import React from 'react'
+import React, {Component} from 'react'
+import { connect } from 'react-redux';
+import {updateUser} from '../actions'
 import Question from './Question'
 
-const Questionarie = () => (
-  <div>
-    <Question question='What is your name?' />
-    <Question question='Where do you live?' />
-    <Question question='What is your currency?' />
-  </div>
-)
+class Questionarie extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+    }
+  }
 
-export default Questionarie
+  onSubmit = () => {
+    this.props.updateUser(this.state)
+    this.props.history.push('/dashboard')
+  }
+
+  onReceiveData = (data) => {
+    this.setState(() => {
+      return {...this.state, ...data}
+    })
+  }
+  render () {
+    return (
+      <div>
+        <Question question='What is your name?' onData={(name) => this.onReceiveData({name})}/>
+        <Question question='What is your country?' onData={(country) => this.onReceiveData({country})}/>
+        <Question question='What is your currency?' onData={(currency) => this.onReceiveData({currency})}/>
+        <button onClick={() => this.onSubmit()}>Discover my dashboard</button>
+      </div>
+    )
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    updateUser: user => {
+      return dispatch(updateUser(user))
+    }
+  }
+}
+
+export default connect(
+  state => ({ state }), 
+  mapDispatchToProps,
+)(Questionarie)

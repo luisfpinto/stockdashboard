@@ -1,4 +1,4 @@
-import { CHANGE_NAME } from '../actions/actions'
+import { UPDATE_USER } from '../actions'
 
 const initialState = {
   name: 'Pepe',
@@ -8,8 +8,8 @@ const initialState = {
 
 export function reducer (state = initialState, action) {
   switch (action.type) {
-    case CHANGE_NAME:
-      return {...state, name: action.name}
+    case UPDATE_USER:
+      return {...state, ...action.user}
     default:
       return state
   }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Home from './Home'
 import Questionarie from './Questionarie'
+import Dashboard from './Dashboard'
 import store from '../store.js'
 
 const AppRouter = () => (
@@ -11,7 +12,7 @@ const AppRouter = () => (
       <div>
         <Route path="/" exact component={Home} />
         <Route path="/questionarie/" component={Questionarie} />
-        {/* <Route path="/users/" component={Users} /> */}
+        <Route path="/dashboard/" component={Dashboard} />
       </div>
     </Router>
   </Provider>
