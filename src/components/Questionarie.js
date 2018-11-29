@@ -25,7 +25,7 @@ class Questionarie extends Component {
       <div>
         <Question question='What is your name?' onData={(name) => this.onReceiveData({name})}/>
         <Question question='What is your country?' onData={(country) => this.onReceiveData({country})}/>
-        <Question question='What is your currency?' onData={(currency) => this.onReceiveData({currency})}/>
+        <Question question='What is the business you wan to track?' onData={(currency) => this.onReceiveData({currency})}/>
         <button onClick={() => this.onSubmit()}>Discover my dashboard</button>
       </div>
     )
