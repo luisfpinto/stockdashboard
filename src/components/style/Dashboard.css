@@ -5,6 +5,15 @@
   justify-content: center;
 }
 
+#charts {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 5px;
+}
+
 #dashboard-title {
   color:  #A9A9A9;
 }

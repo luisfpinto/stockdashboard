@@ -10,9 +10,9 @@ const AppRouter = () => (
   <Provider store={store}>
     <Router>
       <div>
-        <Route path="/" exact component={Home} />
-        <Route path="/questionarie/" component={Questionarie} />
-        <Route path="/dashboard/" component={Dashboard} />
+        <Route path='/' exact component={Home} />
+        <Route path='/questionarie/' component={Questionarie} />
+        <Route path='/dashboard/' component={Dashboard} />
       </div>
     </Router>
   </Provider>

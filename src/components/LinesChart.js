@@ -16,13 +16,13 @@ class Lines extends Component {
           <Chart
             data={[
               {
-                label: "MSFT",
+                label: 'MSFT',
                 data: values
               }
             ]}
             axes={[
-              { primary: true, type: 'linear', position: "bottom" },
-              { type: "linear", position: "left" }
+              { primary: true, type: 'linear', position: 'bottom' },
+              { type: 'linear', position: 'left' }
             ]}
             series={{
               showPoints: false

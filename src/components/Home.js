@@ -16,9 +16,9 @@ class Home extends Component {
 
   render () {
     return (
-      <div className="Home">
-        <header className="Home-header">
-          <div id='animation'/>
+      <div className='Home'>
+        <header className='Home-header'>
+          <div id='animation' />
           <h2>
             Discover what's happening in the market
           </h2>
