@@ -1,0 +1,10 @@
+.Dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#dashboard-title {
+  color:  #A9A9A9;
+}

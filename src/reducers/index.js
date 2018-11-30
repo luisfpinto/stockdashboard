@@ -17,7 +17,7 @@ export function reducer (state = initialState, action) {
     case LOADING: 
       return {...state, isLoading: !state.isLoading}
     case FETCH_SUCCESS:
-      return {...state, weather: action.data.weather, stock: action.data.sock}
+      return {...state, weather: action.data.weather, stock: action.data.stock}
     case FETCH_ERROR:
       return {...state, error: true}
     default:

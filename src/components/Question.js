@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './style/Question.css'
 
 class Question extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Question extends Component {
   return (
     <div>
       <h2>{this.props.question}</h2>
-      <input type='text' value={this.state.value} onChange={this.handleChange} onBlur={() => this.props.onData(this.state.value)} />
+      <input type='text' placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange} onBlur={() => this.props.onData(this.state.value)} />
     </div >
   )
   }
